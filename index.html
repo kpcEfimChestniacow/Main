@@ -27,7 +27,7 @@
             --border-glass: 1px solid rgba(139, 69, 19, 0.2);
         }
 
-        /* Прелоадер */
+        /* Упрощенный прелоадер */
         .preloader {
             position: fixed;
             top: 0;
@@ -40,11 +40,6 @@
             align-items: center;
             z-index: 9999;
             transition: opacity 0.5s ease;
-        }
-
-        .preloader.hidden {
-            opacity: 0;
-            pointer-events: none;
         }
 
         .loader {
@@ -69,10 +64,6 @@
             padding-bottom: 60px;
             position: relative;
             overflow-x: hidden;
-        }
-
-        body.loaded .preloader {
-            display: none;
         }
 
         body::before {
@@ -364,7 +355,6 @@
             transition: transform 0.3s ease;
             height: 200px;
             background: #f0f0f0;
-            position: relative;
         }
 
         .image-item img {
@@ -372,15 +362,6 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: opacity 0.3s ease;
-        }
-
-        .image-item img[data-src] {
-            opacity: 0;
-        }
-
-        .image-item img.loaded {
-            opacity: 1;
         }
 
         .image-item:hover {
@@ -734,7 +715,7 @@
     </style>
 </head>
 <body>
-    <!-- Прелоадер -->
+    <!-- Упрощенный прелоадер -->
     <div class="preloader">
         <div class="loader"></div>
     </div>
@@ -749,7 +730,6 @@
                             width="50" 
                             height="50"
                             alt="Логотип"
-                            loading="eager"
                         >
                     </div>
                     <div class="logo-text">
@@ -794,36 +774,16 @@
                 
                 <div class="image-grid">
                     <div class="image-item">
-                        <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='200' viewBox='0 0 250 200'%3E%3Crect width='250' height='200' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23999'%3EЗагрузка...%3C/text%3E%3C/svg%3E" 
-                            data-src="https://i.ibb.co/N2xZY1m8/2.jpg" 
-                            alt="Презентация проекта"
-                            loading="lazy"
-                        >
+                        <img src="https://i.ibb.co/N2xZY1m8/2.jpg" alt="Презентация проекта">
                     </div>
                     <div class="image-item">
-                        <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='200' viewBox='0 0 250 200'%3E%3Crect width='250' height='200' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23999'%3EЗагрузка...%3C/text%3E%3C/svg%3E" 
-                            data-src="https://i.ibb.co/cS04GxFQ/43.jpg" 
-                            alt="Творческие работы детей"
-                            loading="lazy"
-                        >
+                        <img src="https://i.ibb.co/cS04GxFQ/43.jpg" alt="Творческие работы детей">
                     </div>
                     <div class="image-item">
-                        <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='200' viewBox='0 0 250 200'%3E%3Crect width='250' height='200' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23999'%3EЗагрузка...%3C/text%3E%3C/svg%3E" 
-                            data-src="https://i.ibb.co/vCTF2DZ4/11.jpg" 
-                            alt="Досуговые мероприятия"
-                            loading="lazy"
-                        >
+                        <img src="https://i.ibb.co/vCTF2DZ4/11.jpg" alt="Досуговые мероприятия">
                     </div>
                     <div class="image-item">
-                        <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='200' viewBox='0 0 250 200'%3E%3Crect width='250' height='200' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23999'%3EЗагрузка...%3C/text%3E%3C/svg%3E" 
-                            data-src="https://i.ibb.co/GftWkHKf/10.jpg" 
-                            alt="Дети на занятии"
-                            loading="lazy"
-                        >
+                        <img src="https://i.ibb.co/GftWkHKf/10.jpg" alt="Дети на занятии">
                     </div>
                 </div>
             </div>
@@ -833,20 +793,10 @@
                 <h3><i class="fas fa-portrait"></i>О Ефиме Честнякове</h3>
                 <div class="image-grid">
                     <div class="image-item">
-                        <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='200' viewBox='0 0 250 200'%3E%3Crect width='250' height='200' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23999'%3EЗагрузка...%3C/text%3E%3C/svg%3E" 
-                            data-src="https://i.ibb.co/c0wf1kd/unnamed.png" 
-                            alt="Портрет Ефима Честнякова"
-                            loading="lazy"
-                        >
+                        <img src="https://i.ibb.co/c0wf1kd/unnamed.png" alt="Портрет Ефима Честнякова">
                     </div>
                     <div class="image-item">
-                        <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='200' viewBox='0 0 250 200'%3E%3Crect width='250' height='200' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23999'%3EЗагрузка...%3C/text%3E%3C/svg%3E" 
-                            data-src="https://i.ibb.co/Hf8npXF1/50.jpg" 
-                            alt="Шабловский вид"
-                            loading="lazy"
-                        >
+                        <img src="https://i.ibb.co/Hf8npXF1/50.jpg" alt="Шабловский вид">
                     </div>
                 </div>
                 <p>Ефим Васильевич Честняков (1874-1961) — самобытный художник, скульптор, поэт и педагог, живший в костромской деревне Шаблово. Он совмещал академическую художественную школу с чистым, сказочным восприятием мира, основанном на народном искусстве.</p>
@@ -861,20 +811,10 @@
                 
                 <div class="image-grid">
                     <div class="image-item">
-                        <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='200' viewBox='0 0 250 200'%3E%3Crect width='250' height='200' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23999'%3EЗагрузка...%3C/text%3E%3C/svg%3E" 
-                            data-src="https://i.ibb.co/dwxqZxph/5.jpg" 
-                            alt="Директор ДЮЦ Ровесник"
-                            loading="lazy"
-                        >
+                        <img src="https://i.ibb.co/dwxqZxph/5.jpg" alt="Директор ДЮЦ Ровесник">
                     </div>
                     <div class="image-item">
-                        <img 
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='200' viewBox='0 0 250 200'%3E%3Crect width='250' height='200' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23999'%3EЗагрузка...%3C/text%3E%3C/svg%3E" 
-                            data-src="https://i.ibb.co/kVXnWHmt/L-height.jpg" 
-                            alt="Здание ДЮЦ РОвесник"
-                            loading="lazy"
-                        >
+                        <img src="https://i.ibb.co/kVXnWHmt/L-height.jpg" alt="Здание ДЮЦ РОвесник">
                     </div>
                 </div>
             </div>
@@ -922,66 +862,66 @@
                 <div class="carousel-track">
                     <!-- Первый набор из 10 изображений -->
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/rGbGFv62/19.jpg" alt="Фото 1" loading="lazy">
+                        <img src="https://i.ibb.co/rGbGFv62/19.jpg" alt="Фото 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/TDWsbgJ5/20.jpg" alt="Фото 2" loading="lazy">
+                        <img src="https://i.ibb.co/TDWsbgJ5/20.jpg" alt="Фото 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/TBHSnwT2/21.jpg" alt="Фото 3" loading="lazy">
+                        <img src="https://i.ibb.co/TBHSnwT2/21.jpg" alt="Фото 3">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/3mxdLR0N/29.jpg" alt="Фото 4" loading="lazy">
+                        <img src="https://i.ibb.co/3mxdLR0N/29.jpg" alt="Фото 4">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/1fdMjjpy/26.jpg" alt="Фото 5" loading="lazy">
+                        <img src="https://i.ibb.co/1fdMjjpy/26.jpg" alt="Фото 5">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/4R2jnTMd/23.jpg" alt="Фото 6" loading="lazy">
+                        <img src="https://i.ibb.co/4R2jnTMd/23.jpg" alt="Фото 6">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/jP6npcMH/22.jpg" alt="Фото 7" loading="lazy">
+                        <img src="https://i.ibb.co/jP6npcMH/22.jpg" alt="Фото 7">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/jvBgxFWG/33.jpg" alt="Фото 8" loading="lazy">
+                        <img src="https://i.ibb.co/jvBgxFWG/33.jpg" alt="Фото 8">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/F4QPWbH2/34.jpg" alt="Фото 9" loading="lazy">
+                        <img src="https://i.ibb.co/F4QPWbH2/34.jpg" alt="Фото 9">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/5pNS44N/35.jpg" alt="Фото 10" loading="lazy">
+                        <img src="https://i.ibb.co/5pNS44N/35.jpg" alt="Фото 10">
                     </div>
                     
                     <!-- Дублируем те же 10 изображений для бесшовной анимации -->
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/rGbGFv62/19.jpg" alt="Фото 1" loading="lazy">
+                        <img src="https://i.ibb.co/rGbGFv62/19.jpg" alt="Фото 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/TDWsbgJ5/20.jpg" alt="Фото 2" loading="lazy">
+                        <img src="https://i.ibb.co/TDWsbgJ5/20.jpg" alt="Фото 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/TBHSnwT2/21.jpg" alt="Фото 3" loading="lazy">
+                        <img src="https://i.ibb.co/TBHSnwT2/21.jpg" alt="Фото 3">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/3mxdLR0N/29.jpg" alt="Фото 4" loading="lazy">
+                        <img src="https://i.ibb.co/3mxdLR0N/29.jpg" alt="Фото 4">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/1fdMjjpy/26.jpg" alt="Фото 5" loading="lazy">
+                        <img src="https://i.ibb.co/1fdMjjpy/26.jpg" alt="Фото 5">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/4R2jnTMd/23.jpg" alt="Фото 6" loading="lazy">
+                        <img src="https://i.ibb.co/4R2jnTMd/23.jpg" alt="Фото 6">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/jP6npcMH/22.jpg" alt="Фото 7" loading="lazy">
+                        <img src="https://i.ibb.co/jP6npcMH/22.jpg" alt="Фото 7">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/jvBgxFWG/33.jpg" alt="Фото 8" loading="lazy">
+                        <img src="https://i.ibb.co/jvBgxFWG/33.jpg" alt="Фото 8">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/F4QPWbH2/34.jpg" alt="Фото 9" loading="lazy">
+                        <img src="https://i.ibb.co/F4QPWbH2/34.jpg" alt="Фото 9">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.ibb.co/5pNS44N/35.jpg" alt="Фото 10" loading="lazy">
+                        <img src="https://i.ibb.co/5pNS44N/35.jpg" alt="Фото 10">
                     </div>
                 </div>
             </div>
@@ -994,7 +934,7 @@
             <div class="card">
                 <h3><i class="fas fa-video"></i> Видео-инструкция</h3>
                 <div class="video-container">
-                    <iframe width="720" height="405" src="https://rutube.ru/play/embed/c82786b79ecb836ef722998943bdcd29/?p=V2DZYRngt4YJbcUav5BvAQ&skinColor=d57700" style="border: none;" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen loading="lazy"></iframe>
+                    <iframe width="720" height="405" src="https://rutube.ru/play/embed/c82786b79ecb836ef722998943bdcd29/?p=V2DZYRngt4YJbcUav5BvAQ&skinColor=d57700" style="border: none;" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                 </div>
             </div>
             <div class="card">
@@ -1038,7 +978,7 @@
             <div class="card">
                 <h3><i class="fas fa-map-marker-alt"></i> Как нас найти</h3>
                 <div class="map-container">
-                    <iframe src="https://yandex.ru/map-widget/v1/?ll=40.912734%2C57.752305&z=16&pt=40.912734,57.752305,pm2rdm" width="100%" height="100%" frameborder="0" loading="lazy"></iframe>
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=40.912734%2C57.752305&z=16&pt=40.912734,57.752305,pm2rdm" width="100%" height="100%" frameborder="0"></iframe>
                 </div>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -1116,43 +1056,14 @@
         // Запускаем слайдер
         setInterval(nextSlide, 5000);
 
-        // Ленивая загрузка изображений
-        function lazyLoadImages() {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.classList.add('loaded');
-                            img.removeAttribute('data-src');
-                            observer.unobserve(img);
-                        }
-                    }
-                });
-            });
-
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-
         // Управление прелоадером
         window.addEventListener('load', function() {
             const preloader = document.querySelector('.preloader');
-            preloader.classList.add('hidden');
             
             setTimeout(() => {
                 preloader.style.display = 'none';
-                document.body.classList.add('loaded');
             }, 500);
-            
-            // Запускаем ленивую загрузку после полной загрузки страницы
-            lazyLoadImages();
         });
-
-        // Запускаем ленивую загрузку сразу для видимых элементов
-        lazyLoadImages();
     </script>
 </body>
 </html>
